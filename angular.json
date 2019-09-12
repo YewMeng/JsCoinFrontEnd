@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "JsCoin": {
+    "JsCoinFrontEnd": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/JsCoin",
+            "outputPath": "dist/JsCoinFrontEnd",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "JsCoin:build"
+            "browserTarget": "JsCoinFrontEnd:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "JsCoin:build:production"
+              "browserTarget": "JsCoinFrontEnd:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "JsCoin:build"
+            "browserTarget": "JsCoinFrontEnd:build"
           }
         },
         "test": {
@@ -115,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "JsCoin:serve"
+            "devServerTarget": "JsCoinFrontEnd:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "JsCoin:serve:production"
+              "devServerTarget": "JsCoinFrontEnd:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "JsCoin"
+  "defaultProject": "JsCoinFrontEnd"
 }
